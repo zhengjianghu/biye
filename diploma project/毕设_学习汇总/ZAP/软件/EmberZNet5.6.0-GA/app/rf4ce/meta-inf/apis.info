@@ -1,4 +1,0 @@
-api(sim-eeprom) {
-  name=Simulated EEPROM
-  callbacks=$HAL/config/sim-eeprom-callback.info
-}

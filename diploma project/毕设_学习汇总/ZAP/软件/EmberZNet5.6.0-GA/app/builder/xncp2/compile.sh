@@ -1,3 +1,0 @@
-make clean
-make NO_READLINE=1 GENERATE_LIBRARY=1
-
