@@ -1,0 +1,14 @@
+#include PLATFORM_HEADER
+#include CONFIGURATION_HEADER
+#include EMBER_AF_API_EMBER_TYPES
+#include "app/util/ezsp/ezsp-frame-utilities.h"
+
+void emberSetOrGetEzspTokenCommandHandler(boolean isSet)
+{
+  appendInt8u(EMBER_INVALID_CALL);
+}
+
+boolean emberAfPluginEzspAddEndpointCommandCallback(EmberMessageBuffer buffer)
+{
+  return TRUE;
+}

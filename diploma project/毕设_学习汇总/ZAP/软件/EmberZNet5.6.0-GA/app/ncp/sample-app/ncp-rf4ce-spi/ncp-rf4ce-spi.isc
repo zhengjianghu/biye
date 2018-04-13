@@ -1,0 +1,150 @@
+#ISD afv6
+# ISD version: 3.3.1877
+
+# Application configuration
+appId: ncp
+architecture: em342
+deviceName: ncp-rf4ce-spi
+generationDirectory: PATH(ISC_RELATIVE):
+
+# Devices
+device: EM3xx RF4CE NCP
+
+# Plugin configuration
+appPlugin: adc=true
+appPlugin: alarm-library=false
+appPlugin: alarm-stub-library=false
+appPlugin: binding-table-library=false
+appPlugin: binding-table-stub-library=false
+appPlugin: button=false
+appPlugin: button-stub=true
+appPlugin: buzzer=false
+appPlugin: buzzer-stub=false
+appPlugin: cbke-163k1-library=false
+appPlugin: cbke-163k1-stub-library=false
+appPlugin: cbke-283k1-library=false
+appPlugin: cbke-283k1-stub-library=false
+appPlugin: cbke-library-core=false
+appPlugin: cbke-library-dsa-sign=false
+appPlugin: cbke-library-dsa-sign-stub=false
+appPlugin: cbke-library-dsa-verify=false
+appPlugin: cbke-library-dsa-verify-stub=false
+appPlugin: cbke-stub-library=false
+appPlugin: concentrator-support-library=false
+appPlugin: concentrator-support-stub-library=true
+appPlugin: debug-basic-library=true
+appPlugin: debug-basic-stub-library=false
+appPlugin: debug-extended-library=false
+appPlugin: debug-extended-stub-library=true
+appPlugin: diagnostic=false
+appPlugin: diagnostic-stub=false
+appPlugin: ecc-library-163k1=false
+appPlugin: ecc-library-283k1=false
+appPlugin: ember-minimal-printf=true
+appPlugin: end-device-bind-library=false
+appPlugin: end-device-bind-stub-library=false
+appPlugin: enhanced-beacon-request-library=false
+appPlugin: enhanced-beacon-request-stub-library=false
+appPlugin: ext-device=true
+appPlugin: ezsp-binding=false
+appPlugin: ezsp-cbke=false
+appPlugin: ezsp-mfglib=false
+appPlugin: ezsp-rf4ce=true
+appPlugin: ezsp-security=false
+appPlugin: ezsp-zigbee-pro=false
+appPlugin: ezsp-zll=false
+appPlugin: hal-library=true
+appPlugin: heartbeat=false
+appPlugin: infrared-led=false
+appPlugin: install-code-library=false
+appPlugin: install-code-library-stub=false
+appPlugin: key-matrix=false
+appPlugin: led=false
+appPlugin: led-stub=true
+appPlugin: mfglib-library=false
+appPlugin: mfglib-stub-library=false
+appPlugin: multi-network-library=false
+appPlugin: multi-network-stub-library=true
+appPlugin: ncp-spi=true
+appPlugin: ncp-uart=false
+appPlugin: ncp-usb=false
+appPlugin: packet-validate-library=false
+appPlugin: packet-validate-stub-library=true
+appPlugin: rf4ce-stack-library=true
+appPlugin: rf4ce-stack-stub-library=false
+appPlugin: security-library-core=false
+appPlugin: security-library-link-keys=false
+appPlugin: security-library-link-keys-stub=false
+appPlugin: serial=true
+appPlugin: sim-eeprom1=true
+appPlugin: sim-eeprom2=false
+appPlugin: sim-eeprom2-1to2-upgrade=false
+appPlugin: sim-eeprom2-1to2-upgrade-stub=false
+appPlugin: stack-minimal-library=true
+appPlugin: stm32f103ret-library=false
+appPlugin: stub-security-library=false
+appPlugin: unix-library=false
+appPlugin: xncp=false
+appPlugin: xncp-stub=true
+appPlugin: zigbee-pro-stack=false
+appPlugin: zll-library=false
+appPlugin: zll-stub-library=true
+
+# Setup configurations
+{setupId:additionalFiles
+}
+{setupId:boardHeader
+em342=BOARD,em35x/dev0680spi_16gpio,,
+}
+{setupId:bookkeeping
+}
+{setupId:bootloader
+}
+{setupId:callbackConfiguration
+}
+{setupId:eventConfiguration
+}
+{setupId:ezsp
+}
+{setupId:genConfig
+}
+{setupId:halOptions
+}
+{setupId:information
+\{key:description
+RF4CE-only NCP Application
+
+This application provides an example of a modular NCP configured through the
+Network Coprocessor Application Framework.
+
+The RF4CE-only NCP Application will only handle EZSP commands relevant to an
+RF4CE network. Therefore, it will return EZSP_ERROR_INVALID_FRAME_ID if it
+receives any frames specific to a ZigBee PRO network. Any HOST application
+that is used with this NCP should be aware that it will receive errors from
+the NCP if it tries to send it EZSP commands that are not handled.
+
+It is recommended that customers use RF4CE-only HOST applications built from
+the 5.6 RF4CE Application Framework with this NCP application. RF4CE-only HOST
+applications built from previous versions of the RF4CE Application Framework do
+not have the necessary support to communicate with an RF4CE-only NCP.
+Furthermore, dual network RF4CE applications built from
+the EmberZNet EM35X-EZSP framework are not supported with this RF4CE-only NCP
+application. Please see User Guide UG103.3 for more information on pairing
+HOST and NCP applications.
+
+The benefit of this modular NCP application is that it is much more flash
+and RAM efficient. Whereas a regular NCP application might only be able to
+fit on 192k and up parts, this RF4CE-only NCP application is able to fit
+onto smaller 128k and up parts.
+\}
+}
+{setupId:macros
+}
+{setupId:serial
+}
+{setupId:token
+}
+
+# Plugin options
+pluginOption(simulation): EMBER_AF_PLUGIN_SIM_EEPROM2_PASSWORD,!spoon
+pluginOption(simulation): EMBER_RF4CE_PAIRING_TABLE_SIZE,8
