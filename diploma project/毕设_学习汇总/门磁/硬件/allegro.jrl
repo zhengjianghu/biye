@@ -1,0 +1,40 @@
+\t (00:00:05) allegro 16.3 p006 (v16-3-85F) i86
+\t (00:00:05) 
+
+\t (00:00:06) Opening existing drawing...
+\d (00:00:06) Database opened: L:/biye/biye/diploma project/毕设_学习汇总/门磁/硬件/IN-C01-WDS V1.5.brd
+\i (00:00:07) trapsize 1284
+\i (00:00:07) trapsize 1259
+\i (00:00:07) trapsize 1121
+\i (00:00:07) trapsize 1483
+\i (00:00:08) generaledit 
+\i (00:00:11) pick grid 36.4026 12.8442
+\t (00:00:11) last pick:  36.4490  12.8270
+\i (00:00:12) zoom out 1 
+\i (00:00:12) setwindow pcb
+\i (00:00:12) zoom out 23.5620 10.4718
+\t (00:00:12) Grids are drawn 0.5080, 0.5080 apart for enhanced viewability.
+\i (00:00:12) trapsize 2966
+\i (00:00:13) roam x -96 
+\i (00:00:13) roam x -96
+\i (00:00:14) roam x -96 
+\i (00:00:14) roam x -96
+\i (00:00:14) roam y 96 
+\i (00:00:14) roam y 96
+\i (00:00:15) zoom in 1 
+\i (00:00:15) setwindow pcb
+\i (00:00:15) zoom in 15.5791 7.3151
+\i (00:00:15) trapsize 1483
+\i (00:00:15) zoom in 1 
+\i (00:00:15) setwindow pcb
+\i (00:00:15) zoom in 15.6385 7.3448
+\i (00:00:15) trapsize 741
+\i (00:00:15) zoom out 1 
+\i (00:00:15) setwindow pcb
+\i (00:00:15) zoom out 16.4392 7.6562
+\i (00:00:15) trapsize 1483
+\i (00:00:16) roam y -96 
+\i (00:00:16) roam y -96
+\i (01:18:14) pick grid 39.4516 7.8490
+\t (01:18:14) last pick:  39.4970  7.8740
+\i (11:58:21) exit 
