@@ -1,0 +1,33 @@
+// IAR V5 ILINK linker STM32W108 specific configuration file.
+//
+// Copyright 2008-2009 by Ember Corporation. All rights reserved.           *80*
+
+//------------------------------------------------------------------------------
+// Symbol definition.
+
+//  The STM32W108's main flash block is actually physically instantiated 
+//  starting at address 0x08000000, but unless executing in fib bootload mode, 
+//  it may also be accessed starting at address 0x00000000.  As a result, the
+//  interrupt vectors (especially the reset vector) are still located in the 
+//  proper place where the hardware expects them.
+//  
+
+define memory mem with size = 4G;
+
+define symbol RAM_BOTTOM          = 0x20000000;
+define symbol RAM_TOP             = 0x20001FFF;
+
+define symbol MFB_BOTTOM          = 0x08000000;
+define symbol MFB_TOP             = 0x0801FFFF;
+
+define symbol CIB_BOTTOM          = 0x08040800;
+define symbol CIB_TOP             = 0x080409FF;
+
+define symbol FIB_BOTTOM          = 0x08040000;
+define symbol FIB_TOP             = 0x080407FF;
+
+// include the common icf which locates all the sections
+
+include "iar-cfg-common.icf";
+
+
